@@ -1,22 +1,25 @@
-*~
+# Object files
 *.o
+
+# Dependency file
 .depend
-.vscode
+
+# Build executables
 mtask
-terminal
-bios_example*
-test_util
 tinyos_shell
+terminal
 validate_api
 test_example
-doc/
-*.sublime-*
 
+# BIOS examples (ignore binaries only, not sources)
+bios_example1
+bios_example2
+bios_example3
+bios_example4
+bios_example5
+!bios_example*.c     # <-- keep source files
 
-# Allow VS Code project settings
+# Optional: VS Code configs
 !.vscode/
 !.vscode/c_cpp_properties.json
 !.vscode/settings.json
-
-# Allow dependency file
-!.depend
