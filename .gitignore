@@ -12,3 +12,8 @@ test_example
 doc/
 *.sublime-*
 
+
+# Allow VS Code project settings
+!.vscode/
+!.vscode/c_cpp_properties.json
+!.vscode/settings.json
