@@ -36,6 +36,8 @@ static inline void initialize_PCB(PCB* pcb)
   pcb->argl = 0;
   pcb->args = NULL;
 
+  pcb->thread_count = 0 ;
+
   for(int i=0;i<MAX_FILEID;i++)
     pcb->FIDT[i] = NULL;
 
