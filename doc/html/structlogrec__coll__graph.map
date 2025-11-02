@@ -1,0 +1,29 @@
+<map id="logrec" name="logrec">
+<area shape="rect" id="Node000001" title=" " alt="" coords="581,539,669,605"/>
+<area shape="rect" id="Node000002" href="$structresource__list__node.html" title="List node." alt="" coords="400,341,536,467"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="538,462,565,489,595,525,591,528,561,492,534,466"/>
+<area shape="poly" id="edge18_Node000002_Node000002" title=" " alt="" coords="537,385,555,391,563,404,560,412,553,418,550,414,556,410,557,404,552,395,535,390"/>
+<area shape="rect" id="Node000003" href="$structprocess__control__block.html" title="Process Control Block." alt="" coords="235,677,394,823"/>
+<area shape="poly" id="edge7_Node000003_Node000002" title=" " alt="" coords="401,445,355,482,335,505,320,530,314,553,311,585,311,661,306,661,305,585,308,552,315,528,331,502,352,478,398,441"/>
+<area shape="rect" id="Node000004" href="$structthread__control__block.html" title="The thread control block." alt="" coords="469,885,619,1151"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="537,421,577,437,619,460,656,490,684,528,701,573,709,621,708,669,701,717,688,764,671,810,630,894,625,891,666,808,683,763,696,716,703,668,703,621,696,575,679,531,652,493,616,464,575,442,535,426"/>
+<area shape="rect" id="Node000006" href="$structfile__control__block.html" title="The file control block." alt="" coords="5,529,133,615"/>
+<area shape="poly" id="edge11_Node000006_Node000002" title=" " alt="" coords="400,424,303,453,198,493,144,523,141,518,196,488,301,448,399,419"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="382,675,405,645,423,614,446,548,459,483,464,484,451,550,428,616,409,648,387,679"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="395,729,413,736,421,750,418,759,412,765,408,761,414,756,415,750,410,740,393,734"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="389,821,411,845,460,903,456,906,407,848,385,825"/>
+<area shape="poly" id="edge12_Node000002_Node000004" title=" " alt="" coords="533,886,518,716,493,530,484,483,490,482,499,529,523,715,538,885"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="467,991,424,970,381,941,341,906,310,863,302,840,307,838,314,860,345,902,384,937,427,965,470,986"/>
+<area shape="rect" id="Node000008" href="$structcore__control__block.html" title="Core control block." alt="" coords="613,1243,749,1308"/>
+<area shape="poly" id="edge14_Node000008_Node000004" title=" " alt="" coords="617,1150,659,1227,654,1230,613,1152"/>
+<area shape="rect" id="Node000005" href="$structCondVar.html" title="Condition variables." alt="" coords="158,529,269,615"/>
+<area shape="poly" id="edge8_Node000003_Node000005" title=" " alt="" coords="214,615,217,634,222,652,228,664,224,666,218,654,211,635,209,615"/>
+<area shape="poly" id="edge17_Node000002_Node000006" title=" " alt="" coords="91,528,108,507,129,488,191,456,258,433,323,418,383,409,383,414,324,423,259,438,193,461,132,493,112,510,95,531"/>
+<area shape="poly" id="edge9_Node000003_Node000006" title=" " alt="" coords="118,613,167,651,223,690,220,694,164,655,115,617"/>
+<area shape="rect" id="Node000007" href="$structfile__operations.html" title="The device&#45;specific file operations table." alt="" coords="38,5,149,131"/>
+<area shape="poly" id="edge10_Node000006_Node000007" title=" " alt="" coords="93,131,75,513,69,513,88,131"/>
+<area shape="rect" id="Node000009" href="$structdevice__control__block.html" title="Device control block." alt="" coords="251,193,402,279"/>
+<area shape="poly" id="edge16_Node000009_Node000007" title=" " alt="" coords="151,107,256,182,253,186,148,111"/>
+<area shape="poly" id="edge13_Node000002_Node000008" title=" " alt="" coords="744,1241,769,1217,799,1168,813,1125,817,1078,817,1019,817,571,810,531,791,499,761,473,724,452,682,436,638,425,552,412,553,406,639,419,684,431,726,447,764,468,795,495,815,529,823,570,823,1019,823,1079,818,1126,803,1170,773,1220,748,1244"/>
+<area shape="poly" id="edge15_Node000002_Node000009" title=" " alt="" coords="364,277,407,327,403,330,360,281"/>
+</map>

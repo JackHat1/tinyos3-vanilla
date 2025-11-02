@@ -1,0 +1,73 @@
+<map id="tinyos.h" name="tinyos.h">
+<area shape="rect" id="Node000001" title="Public kernel API." alt="" coords="674,5,749,31"/>
+<area shape="rect" id="Node000002" href="$kernel__init_8c_source.html" title=" " alt="" coords="302,225,403,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="660,26,592,32,516,43,448,59,422,69,404,81,389,97,378,115,363,156,357,196,355,225,350,225,352,195,358,155,373,113,385,93,400,77,419,65,446,54,515,38,592,27,660,20"/>
+<area shape="rect" id="Node000003" href="$kernel__pipe_8c_source.html" title=" " alt="" coords="60,79,168,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="661,27,454,49,188,81,168,84,168,79,187,76,453,44,660,22"/>
+<area shape="rect" id="Node000004" href="$kernel__proc_8h.html" title="The process table and process management." alt="" coords="421,152,530,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="682,40,496,154,493,149,680,36"/>
+<area shape="rect" id="Node000008" href="$kernel__sched_8c_source.html" title=" " alt="" coords="159,225,277,251"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="660,22,600,25,528,34,451,52,378,81,328,115,284,156,250,197,228,227,224,224,246,193,280,153,324,111,375,76,449,47,527,29,600,20,660,16"/>
+<area shape="rect" id="Node000009" href="$kernel__streams_8c_source.html" title=" " alt="" coords="806,225,939,251"/>
+<area shape="poly" id="edge28_Node000001_Node000009" title=" " alt="" coords="762,24,856,44,898,59,924,77,934,96,937,117,934,139,927,160,906,198,885,227,881,224,901,196,922,158,928,137,931,117,929,98,920,80,896,63,855,49,761,29"/>
+<area shape="rect" id="Node000010" href="$kernel__threads_8c_source.html" title=" " alt="" coords="5,225,135,251"/>
+<area shape="poly" id="edge39_Node000001_Node000010" title=" " alt="" coords="660,23,508,27,314,36,140,54,80,66,61,73,49,81,39,97,34,115,37,156,51,195,65,224,60,226,46,197,32,157,29,115,34,95,45,77,58,68,79,61,139,48,313,31,507,21,660,17"/>
+<area shape="rect" id="Node000011" href="$kernel__sched_8h.html" title="TinyOS kernel: The Scheduler API." alt="" coords="415,79,533,104"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="661,37,513,81,511,76,660,32"/>
+<area shape="rect" id="Node000013" href="$kernel__sys_8c_source.html" title=" " alt="" coords="964,225,1067,251"/>
+<area shape="poly" id="edge35_Node000001_Node000013" title=" " alt="" coords="763,17,806,21,855,31,904,49,948,77,978,113,998,155,1010,195,1016,225,1011,226,1005,196,993,157,973,116,944,81,902,54,854,36,806,27,762,22"/>
+<area shape="rect" id="Node000014" href="$kernel__socket_8c_source.html" title=" " alt="" coords="787,79,910,104"/>
+<area shape="poly" id="edge27_Node000001_Node000014" title=" " alt="" coords="747,34,827,76,825,81,744,39"/>
+<area shape="rect" id="Node000015" href="$kernel__streams_8h.html" title="Support for I/O streams." alt="" coords="724,152,859,177"/>
+<area shape="poly" id="edge29_Node000001_Node000015" title=" " alt="" coords="682,41,666,55,653,71,647,87,651,103,665,119,683,132,725,150,723,155,681,137,662,123,646,105,641,86,648,68,662,51,679,37"/>
+<area shape="rect" id="Node000017" href="$kernel__sys_8h_source.html" title=" " alt="" coords="660,79,763,104"/>
+<area shape="poly" id="edge36_Node000001_Node000017" title=" " alt="" coords="714,44,714,79,709,79,709,44"/>
+<area shape="rect" id="Node000018" href="$symposium_8h.html" title="An implementation of Dining Philosophers." alt="" coords="1055,79,1165,104"/>
+<area shape="poly" id="edge40_Node000001_Node000018" title=" " alt="" coords="763,26,1055,78,1054,83,762,31"/>
+<area shape="rect" id="Node000020" href="$tinyoslib_8c_source.html" title=" " alt="" coords="1273,152,1363,177"/>
+<area shape="poly" id="edge42_Node000001_Node000020" title=" " alt="" coords="762,19,896,25,1063,37,1212,54,1265,64,1294,77,1308,94,1316,114,1321,152,1316,152,1311,116,1304,96,1291,81,1263,69,1211,59,1062,42,896,31,762,24"/>
+<area shape="rect" id="Node000021" href="$tinyoslib_8h.html" title="TinyOS standard library header file." alt="" coords="1190,79,1281,104"/>
+<area shape="poly" id="edge43_Node000001_Node000021" title=" " alt="" coords="763,22,946,43,1178,76,1190,78,1189,83,1178,81,946,49,762,27"/>
+<area shape="rect" id="Node000022" href="$unit__testing_8h.html" title="A library for coding and running unit tests." alt="" coords="1375,79,1485,104"/>
+<area shape="poly" id="edge47_Node000001_Node000022" title=" " alt="" coords="762,21,1337,76,1375,80,1374,86,1336,81,762,26"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="445,186,374,227,371,223,443,182"/>
+<area shape="rect" id="Node000005" href="$kernel__cc_8c.html" title="The implementation for concurrency control ." alt="" coords="428,225,523,251"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="478,191,478,225,473,225,473,191"/>
+<area shape="rect" id="Node000006" href="$kernel__dev_8c_source.html" title=" " alt="" coords="547,225,649,251"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="508,182,579,223,577,227,505,186"/>
+<area shape="rect" id="Node000007" href="$kernel__proc_8c_source.html" title=" " alt="" coords="673,225,781,251"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="530,179,687,223,686,228,528,184"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="422,183,260,228,259,223,420,178"/>
+<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="544,176,809,223,808,228,543,181"/>
+<area shape="poly" id="edge10_Node000004_Node000010" title=" " alt="" coords="408,181,135,228,134,223,407,175"/>
+<area shape="poly" id="edge22_Node000011_Node000002" title=" " alt="" coords="447,114,424,132,403,154,377,192,360,226,355,224,372,189,399,150,421,128,444,110"/>
+<area shape="poly" id="edge23_Node000011_Node000004" title=" " alt="" coords="477,118,478,152,472,152,472,118"/>
+<area shape="poly" id="edge13_Node000011_Node000005" title=" " alt="" coords="445,114,429,127,416,143,409,159,411,176,431,203,456,223,453,227,427,207,406,178,404,158,411,140,425,123,441,110"/>
+<area shape="poly" id="edge21_Node000011_Node000006" title=" " alt="" coords="502,111,544,150,573,190,594,224,589,226,569,193,540,154,499,115"/>
+<area shape="poly" id="edge24_Node000011_Node000008" title=" " alt="" coords="443,113,240,228,237,223,440,109"/>
+<area shape="poly" id="edge25_Node000011_Node000009" title=" " alt="" coords="547,96,743,117,828,132,857,141,873,150,883,169,885,190,879,226,874,225,880,189,878,170,869,154,855,146,826,137,742,122,547,101"/>
+<area shape="poly" id="edge26_Node000011_Node000010" title=" " alt="" coords="430,111,103,228,101,223,428,106"/>
+<area shape="rect" id="Node000012" href="$kernel__cc_8h.html" title="Concurrency and preemption control API." alt="" coords="605,152,700,177"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="516,106,624,149,622,154,514,111"/>
+<area shape="poly" id="edge15_Node000012_Node000005" title=" " alt="" coords="612,185,505,228,503,223,610,180"/>
+<area shape="poly" id="edge16_Node000012_Node000006" title=" " alt="" coords="637,190,609,227,605,224,633,187"/>
+<area shape="poly" id="edge17_Node000012_Node000007" title=" " alt="" coords="676,185,717,223,713,227,673,189"/>
+<area shape="poly" id="edge18_Node000012_Node000008" title=" " alt="" coords="592,178,278,230,277,224,592,173"/>
+<area shape="poly" id="edge19_Node000012_Node000009" title=" " alt="" coords="702,179,838,223,836,228,700,184"/>
+<area shape="poly" id="edge20_Node000012_Node000013" title=" " alt="" coords="714,175,964,224,963,229,713,180"/>
+<area shape="poly" id="edge32_Node000015_Node000002" title=" " alt="" coords="711,181,416,228,404,230,403,225,415,223,710,176"/>
+<area shape="poly" id="edge31_Node000015_Node000006" title=" " alt="" coords="749,184,631,228,629,223,747,179"/>
+<area shape="poly" id="edge33_Node000015_Node000007" title=" " alt="" coords="774,189,740,227,736,223,770,186"/>
+<area shape="poly" id="edge34_Node000015_Node000009" title=" " alt="" coords="816,184,861,223,858,227,813,188"/>
+<area shape="rect" id="Node000016" href="$console_8c_source.html" title=" " alt="" coords="1142,225,1225,251"/>
+<area shape="poly" id="edge30_Node000015_Node000016" title=" " alt="" coords="868,177,1142,227,1141,232,867,182"/>
+<area shape="poly" id="edge37_Node000017_Node000012" title=" " alt="" coords="695,116,664,154,660,150,691,113"/>
+<area shape="poly" id="edge38_Node000017_Node000013" title=" " alt="" coords="777,102,846,120,917,150,969,187,1007,223,1003,227,966,191,914,154,844,125,776,107"/>
+<area shape="rect" id="Node000019" href="$tinyos__shell_8c_source.html" title=" " alt="" coords="1087,152,1197,177"/>
+<area shape="poly" id="edge41_Node000018_Node000019" title=" " alt="" coords="1123,116,1139,151,1134,153,1118,118"/>
+<area shape="poly" id="edge44_Node000021_Node000016" title=" " alt="" coords="1231,118,1212,178,1192,226,1187,224,1208,176,1226,117"/>
+<area shape="poly" id="edge45_Node000021_Node000019" title=" " alt="" coords="1211,114,1159,154,1156,150,1208,110"/>
+<area shape="poly" id="edge46_Node000021_Node000020" title=" " alt="" coords="1261,111,1306,150,1303,154,1257,115"/>
+<area shape="rect" id="Node000023" href="$test__example_8c_source.html" title=" " alt="" coords="1387,152,1510,177"/>
+<area shape="poly" id="edge48_Node000022_Node000023" title=" " alt="" coords="1439,117,1448,151,1443,153,1434,118"/>
+</map>

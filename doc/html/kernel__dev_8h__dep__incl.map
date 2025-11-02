@@ -1,0 +1,17 @@
+<map id="kernel_dev.h" name="kernel_dev.h">
+<area shape="rect" id="Node000001" title="Device management." alt="" coords="131,5,235,31"/>
+<area shape="rect" id="Node000002" href="$kernel__dev_8c_source.html" title=" " alt="" coords="5,152,108,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,43,69,154,65,150,162,40"/>
+<area shape="rect" id="Node000003" href="$kernel__init_8c_source.html" title=" " alt="" coords="133,152,234,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,45,186,152,181,152,181,45"/>
+<area shape="rect" id="Node000004" href="$kernel__streams_8h.html" title="Support for I/O streams." alt="" coords="227,79,361,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="214,36,277,76,274,81,211,40"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="244,110,96,154,94,149,242,105"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="266,114,203,154,200,150,263,109"/>
+<area shape="rect" id="Node000005" href="$console_8c_source.html" title=" " alt="" coords="258,152,341,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="299,118,301,152,296,152,293,118"/>
+<area shape="rect" id="Node000006" href="$kernel__proc_8c_source.html" title=" " alt="" coords="365,152,473,177"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="327,108,400,149,398,154,325,113"/>
+<area shape="rect" id="Node000007" href="$kernel__streams_8c_source.html" title=" " alt="" coords="498,152,631,177"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="351,105,522,149,520,154,350,110"/>
+</map>

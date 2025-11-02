@@ -1,0 +1,53 @@
+<map id="util.h" name="util.h">
+<area shape="rect" id="Node000001" title="Tinyos utility code." alt="" coords="497,5,551,31"/>
+<area shape="rect" id="Node000002" href="$kernel__dev_8h.html" title="Device management." alt="" coords="168,79,272,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="484,31,270,81,268,76,483,26"/>
+<area shape="rect" id="Node000008" href="$kernel__streams_8c_source.html" title=" " alt="" coords="365,225,499,251"/>
+<area shape="poly" id="edge32_Node000001_Node000008" title=" " alt="" coords="493,40,472,58,454,80,440,119,433,160,433,225,428,225,428,160,434,118,450,77,468,54,490,36"/>
+<area shape="rect" id="Node000009" href="$kernel__sched_8h.html" title="TinyOS kernel: The Scheduler API." alt="" coords="465,79,583,104"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="527,44,527,79,521,79,521,44"/>
+<area shape="rect" id="Node000016" href="$tinyos__shell_8c_source.html" title=" " alt="" coords="607,79,718,104"/>
+<area shape="poly" id="edge33_Node000001_Node000016" title=" " alt="" coords="560,34,641,76,639,81,557,39"/>
+<area shape="rect" id="Node000017" href="$tinyoslib_8c_source.html" title=" " alt="" coords="742,79,831,104"/>
+<area shape="poly" id="edge34_Node000001_Node000017" title=" " alt="" coords="566,28,745,76,744,81,564,33"/>
+<area shape="rect" id="Node000003" href="$kernel__dev_8c_source.html" title=" " alt="" coords="238,225,341,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="205,117,192,146,190,162,194,176,206,192,221,204,255,223,253,228,218,209,202,195,190,179,185,162,186,145,200,115"/>
+<area shape="rect" id="Node000004" href="$kernel__init_8c_source.html" title=" " alt="" coords="5,225,107,251"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="167,111,130,129,97,154,83,171,73,191,61,226,56,224,68,188,79,168,93,150,127,124,165,106"/>
+<area shape="rect" id="Node000005" href="$kernel__streams_8h.html" title="Support for I/O streams." alt="" coords="205,152,339,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="239,114,266,150,261,153,234,117"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="281,190,289,225,284,226,275,191"/>
+<area shape="poly" id="edge7_Node000005_Node000004" title=" " alt="" coords="225,184,92,228,90,223,223,179"/>
+<area shape="rect" id="Node000006" href="$console_8c_source.html" title=" " alt="" coords="131,225,213,251"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="246,187,190,227,187,223,243,183"/>
+<area shape="rect" id="Node000007" href="$kernel__proc_8c_source.html" title=" " alt="" coords="523,225,631,251"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="335,178,528,223,527,228,334,183"/>
+<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="311,180,407,223,405,228,309,185"/>
+<area shape="poly" id="edge19_Node000009_Node000003" title=" " alt="" coords="495,113,310,227,307,223,492,109"/>
+<area shape="poly" id="edge20_Node000009_Node000004" title=" " alt="" coords="451,100,328,118,260,133,193,154,157,171,123,191,72,227,69,223,120,186,155,166,191,150,258,128,327,112,451,95"/>
+<area shape="poly" id="edge30_Node000009_Node000008" title=" " alt="" coords="511,117,442,227,437,224,507,114"/>
+<area shape="rect" id="Node000010" href="$kernel__cc_8c.html" title="The implementation for concurrency control ." alt="" coords="655,225,750,251"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="598,104,697,127,737,139,758,150,763,161,764,172,755,193,739,212,721,227,717,223,735,208,751,190,759,171,758,162,754,154,735,144,696,132,596,109"/>
+<area shape="rect" id="Node000011" href="$kernel__cc_8h.html" title="Concurrency and preemption control API." alt="" coords="650,152,745,177"/>
+<area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="565,107,670,149,668,154,563,112"/>
+<area shape="rect" id="Node000012" href="$kernel__sched_8c_source.html" title=" " alt="" coords="774,225,893,251"/>
+<area shape="poly" id="edge29_Node000009_Node000012" title=" " alt="" coords="597,104,709,128,754,140,780,150,799,167,813,187,831,224,827,226,809,190,795,170,777,154,753,145,707,133,596,109"/>
+<area shape="rect" id="Node000014" href="$kernel__proc_8h.html" title="The process table and process management." alt="" coords="516,152,625,177"/>
+<area shape="poly" id="edge21_Node000009_Node000014" title=" " alt="" coords="541,114,565,150,561,153,537,117"/>
+<area shape="rect" id="Node000015" href="$kernel__threads_8c_source.html" title=" " alt="" coords="1043,225,1173,251"/>
+<area shape="poly" id="edge31_Node000009_Node000015" title=" " alt="" coords="597,104,811,149,956,188,1072,223,1070,228,955,193,810,155,596,109"/>
+<area shape="poly" id="edge14_Node000011_Node000003" title=" " alt="" coords="637,180,354,228,341,230,340,225,353,223,636,175"/>
+<area shape="poly" id="edge15_Node000011_Node000007" title=" " alt="" coords="667,187,598,227,596,223,665,182"/>
+<area shape="poly" id="edge17_Node000011_Node000008" title=" " alt="" coords="642,183,476,228,474,223,641,178"/>
+<area shape="poly" id="edge13_Node000011_Node000010" title=" " alt="" coords="702,191,704,225,699,225,697,191"/>
+<area shape="poly" id="edge16_Node000011_Node000012" title=" " alt="" coords="732,181,812,223,810,227,730,186"/>
+<area shape="rect" id="Node000013" href="$kernel__sys_8c_source.html" title=" " alt="" coords="917,225,1019,251"/>
+<area shape="poly" id="edge18_Node000011_Node000013" title=" " alt="" coords="755,178,925,223,923,228,753,183"/>
+<area shape="poly" id="edge23_Node000014_Node000003" title=" " alt="" coords="513,183,336,228,334,223,512,178"/>
+<area shape="poly" id="edge24_Node000014_Node000004" title=" " alt="" coords="503,177,328,198,119,228,107,230,106,225,118,223,328,193,502,171"/>
+<area shape="poly" id="edge25_Node000014_Node000007" title=" " alt="" coords="576,191,579,225,574,225,570,191"/>
+<area shape="poly" id="edge27_Node000014_Node000008" title=" " alt="" coords="538,186,456,227,453,223,535,181"/>
+<area shape="poly" id="edge22_Node000014_Node000010" title=" " alt="" coords="605,181,682,223,680,227,602,186"/>
+<area shape="poly" id="edge26_Node000014_Node000012" title=" " alt="" coords="627,178,791,223,790,228,625,183"/>
+<area shape="poly" id="edge28_Node000014_Node000015" title=" " alt="" coords="639,175,838,200,1032,223,1043,224,1043,229,1032,228,837,205,639,180"/>
+</map>

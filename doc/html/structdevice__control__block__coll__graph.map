@@ -1,0 +1,5 @@
+<map id="device_control_block" name="device_control_block">
+<area shape="rect" id="Node000001" title="Device control block." alt="" coords="5,193,156,279"/>
+<area shape="rect" id="Node000002" href="$structfile__operations.html" title="The device&#45;specific file operations table." alt="" coords="25,5,136,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,131,83,177,78,177,78,131"/>
+</map>

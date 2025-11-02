@@ -1,0 +1,7 @@
+<map id="SymposiumTable" name="SymposiumTable">
+<area shape="rect" id="Node000001" title="A symposium monitor." alt="" coords="59,193,185,279"/>
+<area shape="rect" id="Node000002" href="$structsymposium__t.html" title="A symposium definition." alt="" coords="5,5,108,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,130,102,177,97,179,79,132"/>
+<area shape="rect" id="Node000003" href="$structCondVar.html" title="Condition variables." alt="" coords="132,25,243,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="176,112,155,170,151,179,146,177,150,168,171,110"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="serial_device_control_block" name="serial_device_control_block">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,153,157,253"/>
+<area shape="rect" id="Node000002" href="$structCondVar.html" title="Condition variables." alt="" coords="26,5,137,91"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,91,84,137,79,137,79,91"/>
+</map>

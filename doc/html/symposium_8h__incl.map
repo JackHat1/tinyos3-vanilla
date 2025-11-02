@@ -1,0 +1,7 @@
+<map id="symposium.h" name="symposium.h">
+<area shape="rect" id="Node000001" title="An implementation of Dining Philosophers." alt="" coords="5,5,116,31"/>
+<area shape="rect" id="Node000002" href="$tinyos_8h.html" title="Public kernel API." alt="" coords="23,79,98,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,31,63,65,58,65,58,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="25,152,96,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="63,104,63,138,58,138,58,104"/>
+</map>

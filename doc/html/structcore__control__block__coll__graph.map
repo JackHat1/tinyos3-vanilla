@@ -1,0 +1,27 @@
+<map id="core_control_block" name="core_control_block">
+<area shape="rect" id="Node000001" title="Core control block." alt="" coords="117,203,253,269"/>
+<area shape="rect" id="Node000004" href="$structresource__list__node.html" title="List node." alt="" coords="229,341,365,467"/>
+<area shape="poly" id="edge8_Node000004_Node000001" title=" " alt="" coords="208,267,248,326,244,329,204,270"/>
+<area shape="rect" id="Node000002" href="$structthread__control__block.html" title="The thread control block." alt="" coords="5,529,156,795"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,529,72,435,82,386,97,340,115,308,137,279,141,283,119,311,102,342,87,388,78,435,72,529"/>
+<area shape="rect" id="Node000003" href="$structprocess__control__block.html" title="Process Control Block." alt="" coords="228,857,387,1003"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="9,794,11,814,20,832,38,852,59,870,107,896,160,913,212,922,211,928,159,918,105,901,56,874,34,856,16,835,6,815,4,795"/>
+<area shape="poly" id="edge7_Node000004_Node000002" title=" " alt="" coords="154,551,204,489,215,477,219,481,208,492,158,554"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="227,905,173,876,148,857,127,835,111,811,115,808,131,832,152,853,176,872,229,900"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="388,909,406,916,413,930,411,939,404,945,401,941,406,936,408,930,402,920,386,914"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="335,856,351,794,363,720,368,662,365,603,351,530,336,483,341,481,357,529,370,603,374,662,369,721,357,795,340,858"/>
+<area shape="poly" id="edge17_Node000002_Node000004" title=" " alt="" coords="230,439,160,469,141,475,125,477,112,481,99,492,86,515,81,513,95,489,109,476,124,471,140,469,158,464,227,434"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="272,468,254,530,242,604,238,662,241,720,254,794,268,841,263,843,249,795,236,721,232,662,237,603,249,529,267,466"/>
+<area shape="poly" id="edge14_Node000004_Node000004" title=" " alt="" coords="366,385,384,391,391,404,389,412,382,418,379,414,384,410,386,404,380,395,364,390"/>
+<area shape="rect" id="Node000007" href="$structfile__control__block.html" title="The file control block." alt="" coords="446,619,574,705"/>
+<area shape="poly" id="edge13_Node000007_Node000004" title=" " alt="" coords="338,465,376,503,389,511,402,514,415,518,429,527,461,563,486,603,482,606,457,567,426,531,413,523,400,520,387,516,372,507,335,469"/>
+<area shape="rect" id="Node000005" href="$structdevice__control__block.html" title="Device control block." alt="" coords="345,193,496,279"/>
+<area shape="poly" id="edge9_Node000004_Node000005" title=" " alt="" coords="392,281,355,329,351,326,387,277"/>
+<area shape="rect" id="Node000006" href="$structfile__operations.html" title="The device&#45;specific file operations table." alt="" coords="437,5,548,131"/>
+<area shape="poly" id="edge10_Node000005_Node000006" title=" " alt="" coords="468,132,448,179,443,177,463,130"/>
+<area shape="poly" id="edge12_Node000007_Node000006" title=" " alt="" coords="530,130,538,154,538,169,538,338,531,506,521,604,516,603,526,505,533,337,533,169,533,155,525,132"/>
+<area shape="poly" id="edge16_Node000003_Node000007" title=" " alt="" coords="489,706,452,769,404,835,394,847,390,843,400,832,447,766,485,704"/>
+<area shape="poly" id="edge11_Node000004_Node000007" title=" " alt="" coords="510,619,510,589,505,555,495,522,479,492,458,471,433,453,379,428,381,423,436,448,461,467,483,489,500,520,510,554,515,588,516,619"/>
+<area shape="rect" id="Node000008" href="$structCondVar.html" title="Condition variables." alt="" coords="599,619,709,705"/>
+<area shape="poly" id="edge15_Node000003_Node000008" title=" " alt="" coords="643,706,621,752,606,776,588,797,545,831,498,861,450,884,403,903,401,898,447,879,496,856,542,827,584,793,602,773,616,750,638,704"/>
+</map>

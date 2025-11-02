@@ -1,0 +1,27 @@
+<map id="thread_control_block" name="thread_control_block">
+<area shape="rect" id="Node000001" title="The thread control block." alt="" coords="328,5,479,271"/>
+<area shape="rect" id="Node000002" href="$structprocess__control__block.html" title="Process Control Block." alt="" coords="103,363,261,508"/>
+<area shape="poly" id="edge3_Node000002_Node000001" title=" " alt="" coords="330,241,290,296,259,340,251,351,246,348,255,337,285,293,326,238"/>
+<area shape="rect" id="Node000003" href="$structresource__list__node.html" title="List node." alt="" coords="378,615,514,740"/>
+<area shape="poly" id="edge6_Node000003_Node000001" title=" " alt="" coords="406,271,409,386,418,508,432,598,427,599,413,508,404,387,400,271"/>
+<area shape="rect" id="Node000004" href="$structcore__control__block.html" title="Core control block." alt="" coords="463,403,599,468"/>
+<area shape="poly" id="edge8_Node000004_Node000001" title=" " alt="" coords="463,270,514,386,509,389,458,272"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,362,159,327,169,294,197,254,232,221,272,193,312,172,314,177,275,198,236,225,201,257,174,296,164,328,164,362"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="263,412,281,420,288,435,285,445,279,452,275,448,281,442,283,436,277,424,261,417"/>
+<area shape="poly" id="edge5_Node000003_Node000002" title=" " alt="" coords="189,508,197,557,210,589,242,618,280,640,322,655,363,665,361,670,320,660,278,645,239,623,205,592,192,558,184,509"/>
+<area shape="poly" id="edge17_Node000001_Node000003" title=" " alt="" coords="513,627,541,603,568,574,591,542,609,507,618,458,620,394,615,333,606,296,584,262,556,233,524,207,492,185,495,181,527,203,559,229,588,259,611,294,620,333,625,394,623,459,614,509,596,545,572,578,544,606,516,631"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="377,654,326,628,280,593,268,578,262,564,249,533,242,523,247,520,254,531,267,562,273,575,284,589,329,624,379,649"/>
+<area shape="poly" id="edge14_Node000003_Node000003" title=" " alt="" coords="515,658,533,664,541,677,538,686,531,692,528,688,534,683,535,678,530,668,513,663"/>
+<area shape="rect" id="Node000007" href="$structfile__control__block.html" title="The file control block." alt="" coords="381,803,509,888"/>
+<area shape="poly" id="edge13_Node000007_Node000003" title=" " alt="" coords="389,742,378,765,376,776,379,788,373,789,371,777,373,763,385,739"/>
+<area shape="poly" id="edge7_Node000003_Node000004" title=" " alt="" coords="523,469,476,600,471,598,517,468"/>
+<area shape="rect" id="Node000005" href="$structdevice__control__block.html" title="Device control block." alt="" coords="765,393,916,478"/>
+<area shape="poly" id="edge9_Node000003_Node000005" title=" " alt="" coords="804,480,743,537,706,567,667,593,599,628,530,654,529,649,597,623,665,588,703,562,739,533,800,476"/>
+<area shape="rect" id="Node000006" href="$structfile__operations.html" title="The device&#45;specific file operations table." alt="" coords="851,75,961,201"/>
+<area shape="poly" id="edge10_Node000005_Node000006" title=" " alt="" coords="888,201,863,295,850,377,844,376,858,294,883,200"/>
+<area shape="poly" id="edge12_Node000007_Node000006" title=" " alt="" coords="931,200,949,267,960,347,961,389,957,430,947,471,931,509,893,567,846,620,793,666,737,707,680,743,624,773,525,818,523,813,621,769,677,738,734,703,790,662,842,616,888,564,926,507,942,469,952,430,956,388,955,347,944,268,926,201"/>
+<area shape="poly" id="edge16_Node000002_Node000007" title=" " alt="" coords="379,807,327,768,272,719,221,659,200,626,184,592,174,559,171,525,176,525,180,558,188,590,205,624,225,656,275,715,330,764,382,802"/>
+<area shape="poly" id="edge11_Node000003_Node000007" title=" " alt="" coords="470,802,479,778,481,756,486,756,485,779,475,803"/>
+<area shape="rect" id="Node000008" href="$structCondVar.html" title="Condition variables." alt="" coords="5,95,116,181"/>
+<area shape="poly" id="edge15_Node000002_Node000008" title=" " alt="" coords="54,181,49,217,47,257,52,298,64,338,77,357,92,375,88,378,72,360,60,340,46,299,42,257,43,216,48,181"/>
+</map>

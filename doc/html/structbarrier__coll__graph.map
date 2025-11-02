@@ -1,0 +1,5 @@
+<map id="barrier" name="barrier">
+<area shape="rect" id="Node000001" title=" " alt="" coords="27,153,95,259"/>
+<area shape="rect" id="Node000002" href="$structCondVar.html" title="Condition variables." alt="" coords="5,5,116,91"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,91,63,136,58,136,58,91"/>
+</map>
