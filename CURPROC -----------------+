@@ -1,0 +1,18 @@
+CURPROC -----------------+
+                         |
+                         v
+                     allocate PTCB
+                         |
+                         v
+                   ptcb->task = task
+                   ptcb->argl = argl
+                   ptcb->args = args
+                         |
+                         v
+              spawn kernel_thread(start_other_thread)
+                         |
+                         v
+               kernel_thread->ptcb = ptcb
+                         |
+                         v
+                      wakeup(thread)

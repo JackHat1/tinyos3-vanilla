@@ -60,7 +60,32 @@ typedef struct process_control_block {
 
   FCB* FIDT[MAX_FILEID];  /**< @brief The fileid table of the process */
 
+  //***********************************
+  
+  rlnode ptcb_list;  //header for ptcb_list_nodes
+  int thread_count;  //counter for TCBs
+  
 } PCB;
+
+//**********************************************************
+typedef struct process_thread_control_block {
+    TCB* tcb;
+    
+    Task task;              // συνάρτηση που εκτελεί
+    int argl;
+    void* args;             // δείκτης στα arguments
+    
+    int exitval;
+
+    int exited;  
+    int detached;
+    CondVar exit_cv;
+
+    int refcount;
+
+    rlnode ptcb_list_node;    // κόμβος για σύνδεση στη λίστα threads
+    
+} PTCB;
 
 
 /**
