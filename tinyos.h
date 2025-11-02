@@ -58,8 +58,6 @@ typedef int Fid_t;
   */
 typedef uintptr_t Tid_t;
 //*****************************************
-Tid_t tid = (Tid_t) (tcb->ptcb);  //tid is a pointer to ptcb
-PTCB* ptcb = (PTCB*)tid;
 
 /** @brief The invalid thread ID */
 #define NOTHREAD ((Tid_t)0)

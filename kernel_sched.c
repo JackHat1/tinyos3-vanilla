@@ -6,11 +6,11 @@
 #include "kernel_proc.h"
 #include "kernel_sched.h"
 #include "tinyos.h"
-
+#include "util.h"
 #ifndef NVALGRIND
 #include <valgrind/valgrind.h>
 #endif
-
+#define PQ 3 //Number of Proccess queues//
 
 /********************************************
 	
@@ -150,13 +150,14 @@ static void thread_start()
   Initialize and return a new TCB
 */
 
-TCB* spawn_thread(PCB* pcb, void (*func)())
+TCB* spawn_thread(PCB* pcb,PTCB* ptcb ,void (*func)())
 {
 	/* The allocated thread size must be a multiple of page size */
 	TCB* tcb = (TCB*)allocate_thread(THREAD_SIZE);
 
 	/* Set the owner */
 	tcb->owner_pcb = pcb;
+	tcb->ptcb = ptcb;//NEW 
 
 	/* Initialize the other attributes */
 	tcb->type = NORMAL_THREAD;
@@ -164,6 +165,7 @@ TCB* spawn_thread(PCB* pcb, void (*func)())
 	tcb->phase = CTX_CLEAN;
 	tcb->thread_func = func;
 	tcb->wakeup_time = NO_TIMEOUT;
+	tcb->priority = PQ - 1;
 	rlnode_init(&tcb->sched_node, tcb); /* Intrusive list node */
 
 	tcb->its = QUANTUM;
@@ -225,7 +227,7 @@ void release_TCB(TCB* tcb)
   Both of these structures are protected by @c sched_spinlock.
 */
 
-rlnode SCHED; /* The scheduler queue */
+rlnode SCHED[PQ]; /* The scheduler queue *///NEW
 rlnode TIMEOUT_LIST; /* The list of threads with a timeout */
 Mutex sched_spinlock = MUTEX_INIT; /* spinlock for scheduler queue */
 
@@ -268,7 +270,7 @@ static void sched_register_timeout(TCB* tcb, TimerDuration timeout)
 static void sched_queue_add(TCB* tcb)
 {
 	/* Insert at the end of the scheduling list */
-	rlist_push_back(&SCHED, &tcb->sched_node);
+ 	 rlist_push_back(&SCHED[tcb->priority], &tcb->sched_node);//NEWW
 
 	/* Restart possibly halted cores */
 	cpu_core_restart_one();
@@ -326,10 +328,20 @@ static void sched_wakeup_expired_timeouts()
 */
 static TCB* sched_queue_select(TCB* current)
 {
-	/* Get the head of the SCHED list */
-	rlnode* sel = rlist_pop_front(&SCHED);
 
-	TCB* next_thread = sel->tcb; /* When the list is empty, this is NULL */
+	rlnode* sel;	
+	rlnode* list;
+	
+	for(int i=PQ-1;i>=0;i--){
+		list = &SCHED[i]; 	//We run all the queues until we find the first not empty and get its first thread.
+		if(!is_rlist_empty(list)){
+			sel = rlist_pop_front(list);
+			break;			//If we find our thread we don't have to run the rest of the queues so we stop the loop.
+		}
+		sel = rlist_pop_front(list);
+	}
+
+	TCB* next_thread = sel->tcb; /* When all lists are empty, this is NULL */
 
 	if (next_thread == NULL)
 		next_thread = (current->state == READY) ? current : &CURCORE.idle_thread;
@@ -401,6 +413,27 @@ void sleep_releasing(Thread_state state, Mutex* mx, enum SCHED_CAUSE cause,
 		preempt_on;
 }
 
+int N=0;
+void priority_boost(){
+
+		rlnode* list;
+		rlnode* toboost;
+	 for(int i = PQ-2; i>=0; i--){
+			list = &SCHED[i];
+			if(is_rlist_empty(list))
+				continue;
+			while(list->next!=list){
+				list->next->tcb->priority++;
+				toboost = rlist_remove(list->next);
+				rlist_push_back(&SCHED[i+1],toboost);
+			
+			}
+		}
+	N=0;
+	return;
+
+}
+
 /* This function is the entry point to the scheduler's context switching */
 
 void yield(enum SCHED_CAUSE cause)
@@ -410,6 +443,8 @@ void yield(enum SCHED_CAUSE cause)
 
 	/* We must stop preemption but save it! */
 	int preempt = preempt_off;
+
+    N++;	//everytime yield is called, we increase N
 
 	TCB* current = CURTHREAD; /* Make a local copy of current process, for speed */
 
@@ -424,8 +459,32 @@ void yield(enum SCHED_CAUSE cause)
 	current->last_cause = current->curr_cause;
 	current->curr_cause = cause;
 
+	//NEW 
+
+switch(cause)
+		{
+			case SCHED_QUANTUM :
+							if(current->priority>0)
+							current->priority--;
+							break;
+		
+			case SCHED_IO      : 
+							if(current->priority < PQ-1)
+							current->priority++;
+							break;
+		    case SCHED_MUTEX   :
+							 if(current->last_cause == SCHED_MUTEX && current->priority>0)
+							 current->priority--;
+							 break;
+			default:
+				break;
+
+	}
 	/* Wake up threads whose sleep timeout has expired */
 	sched_wakeup_expired_timeouts();
+
+	if(N==5000)	//enough for fibo(40) to run
+		priority_boost();
 
 	/* Get next */
 	TCB* next = sched_queue_select(current);
@@ -446,7 +505,7 @@ void yield(enum SCHED_CAUSE cause)
 	   may have passed. Start a new timeslice...
 	  */
 	gain(preempt);
-}
+}																																
 
 /*
   This function must be called at the beginning of each new timeslice.
@@ -521,17 +580,19 @@ static void idle_thread()
  */
 void initialize_scheduler()
 {
-	rlnode_init(&SCHED, NULL);
+	for(int i=0;i<PQ;i++){
+		rlnode_init(&SCHED[i], NULL);
+	}
 	rlnode_init(&TIMEOUT_LIST, NULL);
+	
 }
-
 void run_scheduler()
 {
 	CCB* curcore = &CURCORE;
 
 	/* Initialize current CCB */
 	curcore->id = cpu_core_id;
-
+	
 	curcore->current_thread = &curcore->idle_thread;
 
 	curcore->idle_thread.owner_pcb = get_pcb(0);

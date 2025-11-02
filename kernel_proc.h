@@ -96,6 +96,11 @@ typedef struct process_thread_control_block {
 */
 void initialize_processes();
 
+void start_thread();
+
+PTCB* initialize_ptcb();
+
+
 /**
   @brief Get the PCB for a PID.
 

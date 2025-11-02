@@ -46,6 +46,22 @@ static inline void initialize_PCB(PCB* pcb)
   pcb->child_exit = COND_INIT;
 }
 
+  PTCB* initialize_ptcb(){
+
+  PTCB* ptcb=(PTCB*)xmalloc(sizeof(PTCB));
+  ptcb->tcb  = NULL;
+  ptcb->task = NULL;
+  ptcb->argl = 0;
+  ptcb->args = NULL;
+  ptcb->exitval = 0;
+  ptcb->refcount = 0;
+  ptcb->detached = 0;
+  ptcb->exited = 0;
+  ptcb->exit_cv = COND_INIT;  
+  rlnode_init(&ptcb->ptcb_list_node , ptcb);
+
+  return ptcb;
+}
 
 static PCB* pcb_freelist;
 
@@ -138,69 +154,6 @@ sys_ThreadExit(exitval);
 
 }
 
-//***********************************************************************************
-/*
-void start_other_thread()
-{
-    PTCB* ptcb = CURTHREAD->ptcb;
-    int exitval = ptcb->task(ptcb->argl, ptcb->args);
-    ThreadExit(exitval);
-}
-*/
-
-/*
-	System call to create a new process.
- */
-/* Ορισμός pool για PTCBs */
-#define MAX_THREADS 128
-static PTCB ptcb_pool[MAX_THREADS];
-static rlnode ptcb_freelist;
-
-/* Αρχικοποίηση PTCBs */
-void initialize_ptcbs() {
-    rlist_init(&ptcb_freelist);
-    for(int i=0;i<MAX_THREADS;i++)
-        rlist_push_front(&ptcb_freelist, &ptcb_pool[i].ptcb_list_node);
-}
-
-/* Απόκτηση ενός PTCB από το freelist */
-static inline PTCB* acquire_ptcb() {
-    if (is_rlist_empty(&ptcb_freelist))
-        return NULL;
-    rlnode* node = rlist_pop_front(&ptcb_freelist);
-    PTCB* ptcb = node->ptcb;
-    ptcb->refcount = 1;
-    return ptcb;
-}
-
-/* Απελευθέρωση ενός PTCB στο freelist */
-static inline void release_ptcb(PTCB* ptcb) {
-    ptcb->tstate = THREAD_DEAD;
-    rlist_push_front(&ptcb_freelist, &ptcb->ptcb_list_node);
-}
-
-/* create_ptcb */
-PTCB* create_ptcb(Task task, int argl, void* args) {
-    PTCB* ptcb = acquire_ptcb();
-    if (!ptcb) return NULL;
-
-    PCB* proc = CURPROC;
-
-    ptcb->task = task;
-    ptcb->argl = argl;
-    ptcb->args = args;
-    ptcb->exitval = 0;
-    ptcb->detached = 0;
-    ptcb->exited = 0;
-    ptcb->tstate = THREAD_ALIVE;
-    ptcb->tcb = NULL;
-
-    rlnode_init(&ptcb->thread_node, ptcb);
-    rlist_push_front(&proc->thread_list, &ptcb->thread_node);
-    proc->thread_count++;
-
-    return ptcb;
-}
 
 Pid_t sys_Exec(Task call, int argl, void* args)
 {
@@ -208,6 +161,7 @@ Pid_t sys_Exec(Task call, int argl, void* args)
   
   /* The new process PCB */
   newproc = acquire_PCB();
+
 
   if(newproc == NULL) goto finish;  /* We have run out of PIDs! */
 
@@ -251,43 +205,20 @@ Pid_t sys_Exec(Task call, int argl, void* args)
     we do, because once we wakeup the new thread it may run! so we need to have finished
     the initialization of the PCB.
    */
-
-  //*************************************************************************
-  if (call != NULL) {
-    // Δημιούργησε το main PTCB
-    PTCB* ptcb = create_ptcb(call, argl, newproc->args);
-    if (ptcb == NULL) {
-        release_PCB(newproc);
-        return NOPROC;
-    }
-
-    // Δημιούργησε το kernel-level thread
-    Thread_t* kthread = spawn_thread(newproc, start_main_thread);
-    if (kthread == NULL) {
-        rlist_remove(&ptcb->thread_node);
-        newproc->thread_count--;
-        release_ptcb(ptcb);
-        release_PCB(newproc);
-        return NOPROC;
-    }
-
-    // Συνδέσεις
-    newproc->main_thread = kthread;
-    ptcb->kernel_thread = kthread;
-    kthread->ptcb = ptcb;          
-    kthread->parent = newproc;
-
-    // Ξύπνα το thread
-    wakeup(kthread);
-  }
-
-/*
+  //NEW
   if(call != NULL) {
-    newproc->main_thread = spawn_thread(newproc, start_main_thread);
-    //new newproc->main_thread = spawn_thread(newproc, start_other_thread);
-    wakeup(newproc->main_thread);
+    PTCB* ptcb = initialize_ptcb();
+    ptcb->tcb = spawn_thread(newproc, ptcb, start_main_thread);
+    rlist_push_front(&newproc->ptcb_list, &ptcb->ptcb_list_node);
+    ptcb->task = newproc->main_task;
+    ptcb->argl = newproc->argl;
+    ptcb->args = newproc->args;
+    newproc->thread_count++;
+    newproc->main_thread=ptcb->tcb;
+    wakeup(ptcb->tcb);
+    
   }
-*/
+
 
 finish:
   return get_pid(newproc);
@@ -394,7 +325,7 @@ Pid_t sys_WaitChild(Pid_t cpid, int* status)
 void sys_Exit(int exitval)
 {
 
-  PCB *curproc = CURPROC;  /* cache for efficiency */
+PCB *curproc = CURPROC;  /* cache for efficiency */
 
   /* First, store the exit status */
   curproc->exitval = exitval;
@@ -407,63 +338,10 @@ void sys_Exit(int exitval)
 
     while(sys_WaitChild(NOPROC,NULL)!=NOPROC);
 
-  } else {
-
-    /* Reparent any children of the exiting process to the 
-       initial task */
-    PCB* initpcb = get_pcb(1);
-    while(!is_rlist_empty(& curproc->children_list)) {
-      rlnode* child = rlist_pop_front(& curproc->children_list);
-      child->pcb->parent = initpcb;
-      rlist_push_front(& initpcb->children_list, child);
-    }
-
-    /* Add exited children to the initial task's exited list 
-       and signal the initial task */
-    if(!is_rlist_empty(& curproc->exited_list)) {
-      rlist_append(& initpcb->exited_list, &curproc->exited_list);
-      kernel_broadcast(& initpcb->child_exit);
-    }
-
-    /* Put me into my parent's exited list */
-    rlist_push_front(& curproc->parent->exited_list, &curproc->exited_node);
-    kernel_broadcast(& curproc->parent->child_exit);
-
-  }
-
-  assert(is_rlist_empty(& curproc->children_list));
-  assert(is_rlist_empty(& curproc->exited_list));
-
-
-  /* 
-    Do all the other cleanup we want here, close files etc. 
-   */
-
-  /* Release the args data */
-  if(curproc->args) {
-    free(curproc->args);
-    curproc->args = NULL;
-  }
-
-  /* Clean up FIDT */
-  for(int i=0;i<MAX_FILEID;i++) {
-    if(curproc->FIDT[i] != NULL) {
-      FCB_decref(curproc->FIDT[i]);
-      curproc->FIDT[i] = NULL;
-    }
-  }
-
-  /* Disconnect my main_thread */
-  curproc->main_thread = NULL;
-
-  /* Now, mark the process as exited. */
-  curproc->pstate = ZOMBIE;
-
-  /* Bye-bye cruel world */
-  kernel_sleep(EXITED, SCHED_USER);
+  } 
+  //Then we move to ThreadExit where all necessary clean-up takes place.
+  sys_ThreadExit(exitval);
 }
-
-
 
 Fid_t sys_OpenInfo()
 {
