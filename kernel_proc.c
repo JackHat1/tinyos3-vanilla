@@ -126,19 +126,17 @@ void start_main_thread()
 }
 
 //***************************************************************************
-void start_thread()
-{
+void start_thread(){
   int exitval;
   TCB* tcb = cur_thread();
+  Task call = tcb->ptcb->task;
+  int argl  = tcb->ptcb->argl;
+  void* args = tcb->ptcb->args;
 
-  Task call =  CURTHREAD->ptcb->task;
-  int argl = CURTHREAD->ptcb->argl;
-  void* args = CURTHREAD->ptcb->args;
+exitval = call(argl,args);
+sys_ThreadExit(exitval);
 
-  exitval = call(argl,args);
-  ThreadExit(exitval);
 }
-
 
 //***********************************************************************************
 /*

@@ -1,6 +1,7 @@
 #include "tinyos.h"
 #include "kernel_sched.h"
 #include "kernel_proc.h"
+#include "kernel_proc.c"
 
 /**
  * @brief Create a new thread in the current process.
@@ -16,7 +17,7 @@ Tid_t sys_CreateThread(Task task, int argl, void* args)
     ptcb->args = args;
 
     // Δημιουργία νέου thread
-    ptcb->tcb = spawn_thread(curproc, ptcb, start_thread);
+    ptcb->tcb = spawn_thread(curproc, ptcb, start_thread );
     Tid_t tid = (Tid_t)(ptcb->tcb->ptcb);
 
     rlist_push_front(&curproc->ptcb_list, &ptcb->ptcb_list_node);   
@@ -83,7 +84,7 @@ int sys_ThreadDetach(Tid_t tid)
         return -1;
     PCB* curproc = CURPROC;
     PTCB ptcb = (PTCB)tid;
-    rlnode* node  = rlist_find(&curproc->ptcb_list, pttcb, NULL);
+    rlnode* node  = rlist_find(&curproc->ptcb_list, ptcb, NULL);
     if(node == NULL)
         return -1;
     if(node->ptcb->exited == 1){
